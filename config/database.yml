@@ -25,7 +25,8 @@ development:
   <<: *default
   database: rails_blog_app
   username: postgres
-  password: <%= ENV["DB_PASSWORD"] %>
+  password: 1234
+  # password: <%= ENV["DB_PASSWORD"] %>
   host: localhost
   port: 5432
 
