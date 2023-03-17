@@ -1,11 +1,13 @@
 <div class="wrapper">
   <ul class="user-list">
+  <% @users.each do |user| %>
     <li class="user-list-item">
       <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
       <div>
-        <h2><%= link_to "Username", target:"_blank"%></h2>
-        <p class="num-posts float-right">Number of posts: <span>0</span>
+        <h2><%= link_to user.name, user %></h2>
+        <p class="num-posts float-right">Number of posts: <span> <%= user.posts_counter %></span>
       </div>
     </li>
+  <% end %>
   </ul>
 </div>

@@ -1,17 +1,18 @@
 <div class="wrapper">
   <div class="border post">
     <div class="post-header">
-      <h3>Post#1 by Username</h3>
+      <h3>Post#<%=@post.id%> by <%= @user.name%></h3>
       <ul class="comments-likes">
-        <li>Comments: x</li>
-        <li>Likes: x</li>
+        <li>Comments: <%=@post.comments_counter%>,</li>
+        <li>Likes: <%=@post.likes_counter%>,</li>
       </ul>
     </div>
-     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+     <p><%= @post.text %></p>
   </div>
     <ul class="list-type-none border comments">
-      <li>Username: Comment 1</li>
-      <li>Username: Comment 1</li>
+      <% @comments.each do |comment| %>
+        <li> <%= comment.user.name %> : <%= comment.text %></li>
+      <% end %>
     </ul>
   </div>
 </div>
