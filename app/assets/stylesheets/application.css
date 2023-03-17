@@ -33,6 +33,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin: 5px 0;
 }
 
 .user-list-item img {
@@ -57,6 +58,10 @@
   margin: 5px 0;
   width: auto;
   justify-content: flex-end;
+}
+
+.comments-likes li {
+  padding: 5px;
 }
 
 .list-type-none {
