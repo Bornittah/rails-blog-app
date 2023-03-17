@@ -4,7 +4,7 @@
       <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
       <div>
         <h2><%= link_to "Username", target:"_blank"%></h2>
-        <p class="num-posts">Number of posts: <span>0</span>
+        <p class="float-right">Number of posts: <span>0</span>
       </div>
     </li>
   </ul>
@@ -34,5 +34,7 @@
       </div>
     </li>
   </ul>
-  <%= link_to 'See All Posts', :class => 'link' %>
+  <div class="action_btn">
+    <%= link_to 'See All Posts' %>
+  </div>
 </div>
