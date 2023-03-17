@@ -1,1 +1,38 @@
-<h1>Here is the list of users</h1>
+<div class="wrapper">
+  <ul class="user-list">
+    <li class="user-list-item">
+      <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
+      <div>
+        <h2><%= link_to "Username", target:"_blank"%></h2>
+        <p class="num-posts">Number of posts: <span>0</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bio border">
+    <h3>Bio</h3>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+  </div>
+   <ul class="post-list list-type-none">
+       <li class="post-list-item">
+      <div class="border post">
+        <p>Post #1</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+        <ul class="comments-likes">
+          <li>Comments: x</li>
+          <li>Likes: x</li>
+        </ul>
+      </div>
+    </li>
+    <li class="post-list-item">
+      <div class="border post">
+        <p>Post #1</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+        <ul class="comments-likes">
+          <li>Comments: x</li>
+          <li>Likes: x</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <%= link_to 'See All Posts', :class => 'link' %>
+</div>

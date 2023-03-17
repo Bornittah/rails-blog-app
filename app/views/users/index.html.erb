@@ -1,1 +1,11 @@
-<h1>User home page</h1>
+<div class="wrapper">
+  <ul class="user-list">
+    <li class="user-list-item">
+      <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
+      <div>
+        <h2><%= link_to "Username", target:"_blank"%></h2>
+        <p class="num-posts float-right">Number of posts: <span>0</span>
+      </div>
+    </li>
+  </ul>
+</div>
