@@ -10,6 +10,7 @@
       <%= render "shared/post_card" %>
   </ul>
   <div class="action_btn">
+    <%= link_to  "Create new Post", new_user_post_path(@user)  %>
     <%= link_to  "See all posts", user_posts_path(@user)  %>
   </div>
 </div>

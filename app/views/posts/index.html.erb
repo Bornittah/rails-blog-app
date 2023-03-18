@@ -9,7 +9,6 @@
     </li>
   </ul>
    <ul class="post-list list-type-none">
-   <% count = 1 %>
     <% @user.posts.each do |post| %>
       <li class="post-list-item">
       <div class="border post">
@@ -32,9 +31,8 @@
     </li>
     <% end %>
   </ul>
-  <% count += 1 %>
   <div class="action_btn">
+    <%= link_to  "Create new Post", new_user_post_path(@user)  %>
     <%= link_to 'Pagination' %>
-    <%= link_to "Create new post", new_user_post_path %>
   </div>
 </div>
