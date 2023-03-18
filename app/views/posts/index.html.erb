@@ -20,14 +20,19 @@
         </ul>
       </div>
       <ul class="list-type-none border comments">
-        <% post.recent_comments.each do |comment|%>
-          <li><%= comment.author.name %>: <%= comment.text %></li>
+        <% if post.comments.empty? %>
+          <p>No comments</p>
+        <% else %>
+          <% post.recent_comments.each do |comment| %>
+            <li><%= comment.author.name %>: <%= comment.text %></li>
+          <% end %>
         <% end %>
       </ul>
     </li>
     <% end %>
   </ul>
   <div class="action_btn">
+    <%= link_to  "Create new Post", new_user_post_path(@user)  %>
     <%= link_to 'Pagination' %>
   </div>
 </div>

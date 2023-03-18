@@ -10,9 +10,17 @@
      <p><%= @post.text %></p>
   </div>
     <ul class="list-type-none border comments">
-      <% @comments.each do |comment| %>
-        <li><%= comment.author.name %> : <%= comment.text %></li> 
+     <% if @comments.empty? %>
+        <p>No comments</p>
+      <% else %>
+        <% @comments.each do |comment| %>
+          <li><%= comment.author.name %>: <%= comment.text %></li>
+        <% end %>
       <% end %>
     </ul>
+  </div>
+  <div class="action_btn">
+    <%= link_to  "Create new Comment", new_user_post_comment_path(@post.author, @post)  %>
+    <%= render partial: 'likes/form' %>
   </div>
 </div>
