@@ -119,10 +119,7 @@ form input {
   margin: 8px;
 }
 
-.add_comment {
-  width: 100%;
-}
-
-.add_comment form textarea {
-  width: 100%;
+.form-control {
+  width: 80%;
+  padding: 12px;
 }
