@@ -103,11 +103,26 @@ a {
 
 .action_btn {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.action_btn a {
+.action_btn a,
+form input {
   text-decoration: none;
   padding: 5px;
   border: 1px solid #000;
   text-align: center;
+  margin: 8px;
+}
+
+.add_comment{
+  width: 100%;
+}
+
+.add_comment form textarea{
+  width: 100%;
 }
