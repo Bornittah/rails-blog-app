@@ -1,1 +1,18 @@
-<h1>Here is the list of posts</h1>
+<div class="wrapper">
+  <div class="border post">
+    <div class="post-header">
+      <h3>Post#<%=@post.id%> by <%= @post.author.name%></h3>
+      <ul class="comments-likes">
+        <li>Comments: <%=@post.comments_counter || 0 %></li>
+        <li>Likes: <%=@post.likes_counter || 0 %></li>
+      </ul>
+    </div>
+     <p><%= @post.text %></p>
+  </div>
+    <ul class="list-type-none border comments">
+      <% @comments.each do |comment| %>
+        <li><%= comment.author.name %> : <%= comment.text %></li> 
+      <% end %>
+    </ul>
+  </div>
+</div>

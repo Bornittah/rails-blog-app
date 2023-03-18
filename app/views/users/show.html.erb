@@ -1,1 +1,15 @@
-<h1>Here is the list of users</h1>
+<div class="wrapper">
+  <ul class="user-list">
+    <%= render "shared/user_card" %>
+  </ul>
+  <div class="bio border">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+   <ul class="post-list list-type-none">
+      <%= render "shared/post_card" %>
+  </ul>
+  <div class="action_btn">
+    <%= link_to  "See all posts", user_posts_path(@user)  %>
+  </div>
+</div>
