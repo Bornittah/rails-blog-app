@@ -9,19 +9,19 @@
     </li>
   </ul>
    <ul class="post-list list-type-none">
-    <% @posts.each do |post| %>
+    <% @user.posts.each do |post| %>
       <li class="post-list-item">
       <div class="border post">
         <p>Post #<%= post.id %></p>
         <p><%= post.text %></p>
         <ul class="comments-likes">
-          <li>Comments: <%=post.comments_counter %></li>
-          <li>Likes: <%=post.likes_counter %></li>
+          <li>Comments: <%=post.comments_counter || 0 %></li>
+          <li>Likes: <%=post.likes_counter || 0 %></li>
         </ul>
       </div>
       <ul class="list-type-none border comments">
         <% post.recent_comments.each do |comment|%>
-          <li><%= comment.user.name %><%= comment.text %></li>
+          <li><%= comment.author.name %>: <%= comment.text %></li>
         <% end %>
       </ul>
     </li>

@@ -5,7 +5,7 @@
       <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
       <div>
         <h2><%= link_to user.name, user %></h2>
-        <p class="num-posts float-right">Number of posts: <span> <%= user.posts_counter %></span>
+        <p class="num-posts float-right">Number of posts: <span> <%= user.posts_counter || 0 %></span>
       </div>
     </li>
   <% end %>

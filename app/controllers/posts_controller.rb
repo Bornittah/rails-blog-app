@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id].to_i)
-    @post = @user.posts
+    @posts = Post.where(author_id: params[:user_id]) || 'No posts yet'
   end
 
   def show
-    @post = Post.joins(:user).where(user: { id: params[:user_id] }).find(params[:id])
+    @post = Post.find_by(author_id: params[:user_id], id: params[:id]) || 'No posts yet'
     @comments = @post.comments
   end
 end

@@ -1,32 +1,15 @@
 <div class="wrapper">
   <ul class="user-list">
-    <li class="user-list-item">
-      <img src="<%= asset_path( 'Placeholder.svg.png' ) %>" alt="user">
-      <div>
-        <h2><%= @user.name %></h2>
-        <p class="float-right">Number of posts: <span><%= @user.posts_counter %></span>
-      </div>
-    </li>
+    <%= render "shared/user_card" %>
   </ul>
   <div class="bio border">
     <h3>Bio</h3>
     <p><%= @user.bio %></p>
   </div>
    <ul class="post-list list-type-none">
-    <% @user.posts.each do |post| %>
-      <li class="post-list-item">
-        <div class="border post">
-          <h3><%= post.title %></h3>
-          <p><%= post.text %></p>
-          <ul class="comments-likes">
-            <li>Comments: <%= post.comments_counter %></li>
-            <li>Likes: <%= post.likes_counter %></li>
-          </ul>
-        </div>
-      </li>
-    <% end %>
+      <%= render "shared/post_card" %>
   </ul>
   <div class="action_btn">
-    <%= link_to 'See All Posts' %>
+    <%= link_to  "See all posts", user_posts_path(@user)  %>
   </div>
 </div>
