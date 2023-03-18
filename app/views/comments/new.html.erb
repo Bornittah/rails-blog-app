@@ -1,1 +1,14 @@
-<h1>Create new comment</h1>
+<div class="wrapper">
+  <div class="add_comment">
+      <h1>Add new comment to the post</h1>
+      <%= form_with model: @comment, url: user_post_comments_path, local: true do |form| %>
+        <p>
+          <%= form.label :Comment %><br>
+          <%= form.text_area :text, rows: 5 %>
+        </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
+  </div>
+</div>
