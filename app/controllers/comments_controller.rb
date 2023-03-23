@@ -1,12 +1,15 @@
 class CommentsController < ApplicationController
   def new
-    @comment = Comment.new
+    @comments = Comment.new
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
+    @comment.post_id = params[:post_id]
+    @comment.author_id = current_user.id
     if @comment.save
-      redirect_to user_post_path(params[:user_id], params[:post_id])
+      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}"
     else
       render :new
     end
@@ -15,6 +18,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:text).merge(author_id: current_user.id, post_id: params[:post_id])
+    params.require(:comment).permit(:text)
   end
 end

@@ -107,6 +107,12 @@ No deployment
 - Twitter: [@AgashaBornittah](https://twitter.com/AgashaBornittah)
 - LinkedIn: [Bornittah](www.linkedin.com/in/agasha-bornittah)
 
+👤 **Ssekweyama Pius**
+
+- GitHub: [@githubhandle](https://github.com/SSEKPIUS)
+- Twitter: [@twitterhandle](https://twitter.com/SSEK_PIUS)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/pius-ssekweyama-23665794)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

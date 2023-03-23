@@ -1,20 +1,14 @@
-<div class="wrapper">
-  <div class="form-container">
-    <h1>Add new post</h1>
-    <div>
-      <%= form_with model: @post, url: user_posts_path, method: :post,  local: true, scope: :post  do |form| %>
-        <p>
-          <%= form.label :title %><br>
-          <%= form.text_field(:title, class: "form-control") %>
-        </p>
-        <p>
-          <%= form.label :text %><br>
-          <%= form.text_area(:text, rows: 5, class: "form-control") %>
-        </p>
-        <p>
-          <%= form.submit 'Add Post' %>
-        </p>
-      <% end %>
-    </div>
-  </div>
+<div class="new-post">
+    <h1>Add New Post</h1>
+    <%= form_with model: @post, url: user_posts_path do |f| %>
+        <div class="mb-3">
+        <%= f.label :title %>
+        <%= f.text_field :title, placeholder: 'Enter title', class: "form-control" %>
+        </div>
+        <div class="mb-3">
+        <%= f.label :body %>
+        <%= f.text_area :body, placeholder: 'Write post... ', class: "form-control" %>
+        <div>
+        <%= f.submit 'Create post', class: 'btn btn-primary' %>
+    <% end %>
 </div>

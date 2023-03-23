@@ -1,22 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  describe 'Association Test' do
-    it { should belong_to(:author) }
-    it { should belong_to(:post) }
+  subject { described_class.new(author_id: 1, post_id: 3, text: 'post1') }
+  before { subject.save }
+
+  it 'author_id should be present' do
+    subject.author_id = nil
+    expect(subject).to_not be_valid
   end
 
-  describe 'Tests Comment model' do
-    User.create(name: 'Tiina', photo: 'https://unsplash.com/photos/6PP8DrhY0aA', bio: 'Coding girl')
-    post = Post.create(author: subject, title: 'Intro', text: 'Welcome to this blog!')
+  it 'text should be present' do
+    subject.text = nil
+    expect(subject).to_not be_valid
+  end
 
-    subject { Comment.new }
-    before { subject.save }
-
-    it 'Test comments_counter' do
-      post.comments_conter = 3
-      subject.post = post
-      expect(subject.post.comments_conter).to eq 3
-    end
+  it 'post_id should be an integer' do
+    subject.post_id = 'a'
+    expect(subject).to_not be_valid
   end
 end
