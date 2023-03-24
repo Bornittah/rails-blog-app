@@ -75,6 +75,8 @@ group :development do
   gem 'capybara'
   gem 'cancancan'
   gem 'selenium-webdriver'
+  gem 'bullet'
+  gem 'letter_opener'
   gem 'web-console'
   gem 'webdrivers'
 
