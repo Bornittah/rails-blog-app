@@ -72,11 +72,11 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'bullet'
   gem 'cancancan'
   gem 'capybara'
-  gem 'bullet'
-  gem 'selenium-webdriver'
   gem 'letter_opener'
+  gem 'selenium-webdriver'
   gem 'web-console'
   gem 'webdrivers'
 
